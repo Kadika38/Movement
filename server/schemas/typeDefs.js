@@ -5,21 +5,11 @@ const typeDefs = gql`
     _id: ID!
     username: String!
     password: String!
-    todos: [Todo]
   }
 
   type Auth {
     token: ID!
     user: User
-  }
-
-  type Todo {
-    _id: ID!
-    title: String!
-    repeat: Boolean!
-    repeatTime: Int
-    creation: String!
-    spot: Int
   }
 
   type Query {
@@ -31,9 +21,6 @@ const typeDefs = gql`
     addUser(username: String!, password: String!): Auth
     login(username: String!, password: String!): Auth
     deleteUser(profileId: ID!): User
-
-    addTodo(profileId: ID!, title: String!, repeat: Boolean!, repeatTime: Int): User
-    deleteTodo(profileId: ID!, todoId: ID!): User
   }
 `;
 

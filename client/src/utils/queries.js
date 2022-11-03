@@ -6,13 +6,6 @@ query OneUser($profileId: ID!) {
       _id
       username
       password
-      todos {
-        _id
-        title
-        repeat
-        repeatTime
-        creation
-      }
     }
   }
 `;

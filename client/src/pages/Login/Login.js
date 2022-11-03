@@ -46,7 +46,7 @@ export default function Login() {
 
     if (Auth.loggedIn()) {
         return (
-            <Navigate to="/main" replace={true} />
+            <Navigate to="/" replace={true} />
         )
     }
 

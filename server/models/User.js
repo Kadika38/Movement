@@ -1,29 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require("bcrypt");
 
-const todoSchema = new Schema({
-  title: {
-    type: String,
-    required: true,
-  },
-  repeat: {
-      type: Boolean,
-      required: true,
-  },
-  repeatTime: {
-      type: Number,
-  },
-  creation: {
-    type: String,
-  },
-  spot: {
-    type: Number,
-  }
-},
-{
-timestamps: true,
-});
-
 const userSchema = new Schema({
   username: {
     type: String,
@@ -34,7 +11,6 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
-  todos: [todoSchema],
 },
 {
   timestamps: true,

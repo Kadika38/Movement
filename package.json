@@ -1,7 +1,7 @@
 {
-  "name": "todoqueue",
+  "name": "movement",
   "version": "1.0.0",
-  "description": "helpful task managament system",
+  "description": "just testing some stuff out",
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",

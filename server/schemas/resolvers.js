@@ -38,37 +38,6 @@ const resolvers = {
     deleteUser: async (parent, { profileId }) => {
       return User.findByIdAndDelete({ _id: profileId });
     },
-
-    //Todo mututations
-    addTodo: async (parent, args) => {
-      const userId = args.profileId;
-      delete args.profileId;
-
-      const now = (new Date()).toString();
-      args.creation = now;
-
-      return User.findOneAndUpdate(
-        { _id: userId },
-        {
-          $addToSet: {
-            todos: { ...args }
-          },
-        },
-        {
-          new: true,
-        },
-      );
-    },
-    deleteTodo: async (parent, args) => {
-      return User.findOneAndUpdate(
-        { _id: args.profileId },
-        {
-          $pull: {
-            todos: { _id: args.todoId },
-          },
-        },
-      );
-    },
   },
 };
 
