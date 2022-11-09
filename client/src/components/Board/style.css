@@ -5,9 +5,3 @@
     display: flex;
     flex-wrap: wrap;
 }
-
-.square {
-    width: 28px;
-    height: 28px;
-    border-color: black;
-}
