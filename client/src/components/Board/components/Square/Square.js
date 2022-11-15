@@ -1,14 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../style.css";
 
 export default function Square(props) {
-    const width = 30 - (props.left ? 1 : 0) - (props.right ? 1 : 0);
-    const height = 30 - (props.top ? 1 : 0) - (props.bottom ? 1 : 0);
-
-    const singular = (props.left && props.right && props.top && props.bottom);
 
     return (
-        <div style={{borderLeft:(props.left ? "solid" : "none"), borderTop:(props.top ? "solid" : "none"), borderRight:(props.right ? "solid" : "none"), borderBottom:(props.bottom ? "solid" : "none"), borderWidth:"1px", width:(width === 30 ? "30px" : (width === 29 ? "29px" : "28px")), height:(height === 30 ? "30px" : (height === 29 ? "29px" : "28px")), backgroundColor:(singular ? "black" : "white")}}>
+        <div style={{borderLeft:"solid", borderTop:"solid", borderRight:"solid", borderBottom:"solid", borderWidth:"1px", width:"28px", height:"28px", backgroundColor:(props.wall ? "black" : "white")}}>
             
         </div>
     );
