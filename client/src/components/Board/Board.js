@@ -17,8 +17,19 @@ export default function Board() {
 
     for (let i = 0; i < high; i++) {
         for (let j = 0; j < wide; j++) {
-            (i === 0 && j === 0) ? mapper[i].push(false) : mapper[i].push(randBool());
+            mapper[i].push("white");
         }
+    }
+
+    const route = () => {
+        //find the shortest route from start to finish
+        const start = [0, 0];
+        const end = [9, 9];
+        let current = start;
+
+        //step by step process
+        let routeHolder = [start];
+        
     }
 
     return (
