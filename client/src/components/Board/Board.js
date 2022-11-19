@@ -23,13 +23,18 @@ export default function Board() {
 
     const route = () => {
         //find the shortest route from start to finish
+        const boardWidth = 10;
+        const boardHeight = 10;
         const start = [0, 0];
         const end = [9, 9];
+        const allRoutes = [];
         let current = start;
 
         //step by step process
         let routeHolder = [start];
-        
+        while (current !== end) {
+            //find next square to move to...
+        }
     }
 
     return (
